@@ -8,7 +8,7 @@ export default function Sidebar() {
 
   return (
 
-    <div className="w-20 h-full bg-white rounded-2xl shadow flex flex-col items-center justify-between py-6">
+    <div className="w-20 h-screen sticky top-0 bg-white rounded-2xl shadow flex flex-col justify-between items-center py-6">
 
       {/* Top Section */}
 

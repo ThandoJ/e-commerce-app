@@ -17,7 +17,9 @@ export default function Home() {
 
   return (
 
-    <div className="flex bg-gray-100 h-screen p-6 gap-6">
+     
+<div className="min-h-screen bg-gray-100 flex p-6 gap-6">
+   
 
       {/* Sidebar */}
 
@@ -77,6 +79,8 @@ export default function Home() {
 
 </div>
 
+    
     </div>
+    
   )
 }
