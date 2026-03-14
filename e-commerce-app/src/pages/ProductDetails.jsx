@@ -31,11 +31,11 @@ export default function ProductPage() {
 
         <p className="text-xl font-semibold">${product.price}</p>
 
-        <p><strong>Brand:</strong> {product.brand}</p>
+        <p><strong>Brand:</strong>  {product.brand} Apple</p>
 
-        <p><strong>Category:</strong> {product.category}</p>
+        <p><strong>Category:</strong> {product.category} </p>
 
-        <p><strong>Rating:</strong> ⭐ {product.rating}</p>
+        <p><strong>Rating:</strong>  {product.rating}</p>
 
         <p><strong>Stock:</strong> {product.stock} available</p>
 
