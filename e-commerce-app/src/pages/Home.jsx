@@ -30,14 +30,23 @@ export default function Home() {
       <div className="flex-1">
 
         {/* Search */}
+<div className="mb-8 flex justify-center">
 
-        <div className="mb-6">
-          <input
-            placeholder="Apple Watch, Samsung S21, Macbook Pro..."
-            className="w-96 p-3 rounded-xl shadow"
-            onChange={(e)=>setSearch(e.target.value)}
-          />
-        </div>
+  <div className="w-[420px]">
+
+    <p className="text-gray-600 mb-2">
+      Search Item
+    </p>
+
+    <input
+      placeholder="Apple Watch, Samsung S21, Macbook Pro, ..."
+      className="w-full bg-white p-4 rounded-2xl shadow-md outline-none"
+      onChange={(e)=>setSearch(e.target.value)}
+    />
+
+  </div>
+
+</div>
 
         {/* Product Grid */}
 
@@ -53,9 +62,11 @@ export default function Home() {
 
       {/* Bag Section */}
 
-      <div className="w-64 bg-white rounded-xl shadow p-6">
+      <div className="w-64 border-l-2 border-black pl-6">
 
-        <h2 className="text-xl font-bold mb-6">Bag</h2>
+        <h2 className="text-xl font-bold mb-6 text-center">
+            Bag
+        </h2>
 
         <div className="grid grid-cols-3 gap-3 mb-6">
 
