@@ -12,7 +12,7 @@ export default function ProductPage() {
 
   return (
     <>
-      <div className="flex bg-gray-200">
+      <div className="flex bg-gray-100 p-6">
         <Sidebar />
         <div className="flex flex-col pl-10">
           <div className="h-22 w-10 mt-12">Back</div>
@@ -43,10 +43,7 @@ export default function ProductPage() {
             {/* Product Info */}
 
             <div className="flex flex-col gap-4">
-
-              <p className="text-5xl font-bold">
-                {product.name}
-              </p>
+              <p className="text-5xl font-bold">{product.name}</p>
 
               <p className="text-3xl font-medium text-gray-500">
                 {product.subtitle}
@@ -59,20 +56,19 @@ export default function ProductPage() {
               <p className="text-gray-600">{product.description}</p>
 
               <h1 className="text-sm font-400 w-121">
-                Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Ea saepe ipsum sequi, expedita delectus, magni
-                voluptas provident ipsam doloribus consectetur neque dicta.
-                Natus tenetur quaerat laborum facilis, fugit voluptates cum?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea
+                saepe ipsum sequi, expedita delectus, magni voluptas provident
+                ipsam doloribus consectetur neque dicta. Natus tenetur quaerat
+                laborum facilis, fugit voluptates cum?
               </h1>
 
               <div className="w-full flex justify-end mb-8">
-
-              <button
-                className="bg-black text-white px-6 py-3 rounded-lg w-40"
-                onClick={() => dispatch(addToCart(product))}
-              >
-                Add to Cart
-              </button>
+                <button
+                  className="bg-black text-white px-6 py-3 rounded-lg w-40"
+                  onClick={() => dispatch(addToCart(product))}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
