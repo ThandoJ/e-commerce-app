@@ -15,12 +15,12 @@ export default function ProductCard({ product }) {
 
       <Link to={`/product/${product.id}`}>
 
-        <div className="bg-white p-6 rounded-xl shadow flex justify-center items-center">
+        <div className="bg-white p-1 rounded-xl shadow flex justify-center items-center">
 
           <img
             src={product.image}
             alt={product.name}
-            className="w-28 h-28 object-contain"
+            className="w-38 h-38 object-contain"
           />
 
         </div>
