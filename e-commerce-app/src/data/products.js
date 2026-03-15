@@ -15,6 +15,7 @@ import Iphone11B from "../assets/Iphone11B.png"
 import DellXPS13White from "../assets/Dell-XPS-13-White.png"
 import DellXPS13Black from "../assets/Dell-XPS-13-Black.png"
 import DellXPS15Black from "../assets/Dell-XPS-15-Black.png"
+import Iphone12Pro03 from "../assets/Iphone-12-Pro-03.png"
 
 
 const products = [
@@ -87,7 +88,7 @@ const products = [
     {
         id: 6,
         name: "SamsungNote21",
-        subtitle: "Serious Black",
+        subtitle: "Tiatanic",
         price: 619.99,
         image: SamsungNote21,
         brand: "Samsung",
@@ -113,7 +114,7 @@ const products = [
     {
         id: 8,
         name: "SamsungS21",
-        subtitle: "Serious Black",
+        subtitle: "Lavender",
         price: 619.99,
         image: SamsungS21,
         brand: "Samsung",
@@ -205,7 +206,7 @@ const products = [
         id: 15,
         name: "Dell XPS 13",
         subtitle: "White",
-        price: 619.99,
+        price: 1800.99,
         image: DellXPS13White,
         brand: "Dell",
         category: "Laptop",
@@ -218,7 +219,7 @@ const products = [
         id: 16,
         name: "Dell XPS 13",
         subtitle: "Black",
-        price: 619.99,
+        price: 1799.99,
         image: DellXPS13Black,
         brand: "Dell",
         category: "Laptop",
@@ -226,6 +227,33 @@ const products = [
         stock: 4,
         description: "Premium Dell XPS 13 laptop designed for productivity with powerful performance and elegant design."
     },
+
+    {
+        id: 16,
+        name: "Iphone 12 Pro",
+        subtitle: "Navy-Blue",
+        price: 619.99,
+        image: Iphone12Pro03,
+        brand: "Apple",
+        category: "Laptop",
+        rating: 4.8,
+        stock: 4,
+        description: "Premium Dell XPS 13 laptop designed for productivity with powerful performance and elegant design."
+    },
+
+    {
+        id: 16,
+        name: "Dell XPS 15",
+        subtitle: "Black",
+        price: 1999.99,
+        image: DellXPS15Black,
+        brand: "Dell",
+        category: "Laptop",
+        rating: 4.8,
+        stock: 4,
+        description: "Premium Dell XPS 13 laptop designed for productivity with powerful performance and elegant design."
+    },
+
 
 
 ]
