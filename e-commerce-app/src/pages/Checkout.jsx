@@ -1,6 +1,6 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { clearCart, increaseQty, decreaseQty } from "../redux/cartSlice";
+import { increaseQty, decreaseQty } from "../redux/cartSlice";
 import React from "react";
 
 const Checkout = () => {
