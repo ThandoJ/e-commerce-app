@@ -18,8 +18,8 @@ function App() {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/add-Address" element={<AddAddress />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/add-payment" element={<AddPayment />} />
-        <Route path="/bag" element={ <Bag />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/bag" element={<Bag />} />
 
       </Routes>
     </BrowserRouter>
