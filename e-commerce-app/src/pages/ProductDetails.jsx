@@ -69,11 +69,11 @@ export default function ProductPage() {
 
                         <div className="flex flex-col gap-5 max-w-lg">
 
-                            <h1 className="text-3xl font-bold">
+                            <h1 className="font-semibold text-lg">
                                 {product.name}
                             </h1>
 
-                            <p className="text-gray-500">
+                            <p className="text-gray-500 text-sm mb-2">
                                 {product.subtitle}
                             </p>
 
