@@ -42,12 +42,15 @@ export default function ProductPage() {
 
             {/* Product Info */}
 
-            <div className="flex flex-col gap-4">
-              <p className="text-5xl font-bold">{product.name}</p>
+                        <div className="flex flex-col gap-5 max-w-lg">
 
-              <p className="text-3xl font-medium text-gray-500">
-                {product.subtitle}
-              </p>
+                            <h1 className="text-3xl font-bold">
+                                {product.name}
+                            </h1>
+
+                            <p className="text-gray-500">
+                                {product.subtitle}
+                            </p>
 
               <p className="text-2xl text-green-700">{product.rating}./5</p>
 
