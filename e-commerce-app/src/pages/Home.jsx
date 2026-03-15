@@ -32,7 +32,7 @@ export default function Home() {
         {/* Search */}
 <div className="mb-8 flex justify-center">
 
-  <div className="w-420px">
+  <div className="w-[420px]">
 
     <p className="text-gray-600 mb-2">
       Search Item
