@@ -55,7 +55,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.9,
         stock: 10,
-        description: "."
+        description: "Apple iPhone 11 featuring a powerful A13 Bionic chip, dual camera system, and smooth performance for everyday use."
     },
 
     {
@@ -68,7 +68,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.7,
         stock: 12,
-        description: "."
+        description: "Special edition red iPhone 11 with advanced camera capabilities, vibrant display, and reliable battery life."
     },
 
     {
@@ -81,7 +81,7 @@ const products = [
         category: "Laptop",
         rating: 4.9,
         stock: 12,
-        description: "."
+        description: "Apple MacBook laptop designed for productivity with a sleek design, powerful performance, and long battery life."
     },
 
     {
@@ -94,7 +94,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.8,
         stock: 8,
-        description: "."
+        description: "Samsung Galaxy Note21 with high performance hardware, stunning display, and productivity features."
     },
 
     {
@@ -107,7 +107,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.7,
         stock: 6,
-        description: "."
+        description: "Premium Samsung Galaxy S21 Pro smartphone with powerful processor and professional grade camera."
     },
 
     {
@@ -120,7 +120,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.6,
         stock: 15,
-        description: "."
+      description: "Samsung Galaxy S21 smartphone with modern design, high resolution display, and fast performance."
     },
 
     {
@@ -133,7 +133,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.9,
         stock: 12,
-        description: "."
+       description: "Elegant white iPhone 11 with smooth performance, strong battery life, and advanced camera technology."
     },
 
     {
@@ -146,7 +146,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.8,
         stock: 16,
-        description: "."
+        description: "Apple iPhone 13 Pro featuring improved camera system, powerful performance, and stunning display quality."
     },
 
     {
@@ -159,7 +159,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.8,
         stock: 14,
-        description: "."
+       description: "High performance iPhone 13 Pro with sleek black finish and advanced camera technology."
     },
 
     {
@@ -172,7 +172,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.9,
         stock: 8,
-        description: "."
+        description: "Stylish blue iPhone 13 Pro designed for performance, photography, and premium user experience."
     },
 
     {
@@ -185,7 +185,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.8,
         stock: 11,
-        description: "."
+        description: "Apple iPhone 12 Pro featuring a modern design, powerful processor, and advanced photography features."
     },
 
     {
@@ -198,7 +198,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.4,
         stock: 23,
-        description: "."
+        description: "Classic black iPhone 11 with smooth performance, strong battery life, and reliable everyday usability."
     },
 
     {
@@ -211,7 +211,7 @@ const products = [
         category: "Laptop",
         rating: 4.7,
         stock: 9,
-        description: "."
+        description: "Dell XPS 13 laptop with ultra-thin design, powerful performance, and high resolution display."
     },
 
     {
@@ -224,7 +224,7 @@ const products = [
         category: "Laptop",
         rating: 4.8,
         stock: 4,
-        description: "."
+        description: "Premium Dell XPS 13 laptop designed for productivity with powerful performance and elegant design."
     },
 
 
