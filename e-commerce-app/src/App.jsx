@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import ProductDetails from "./pages/ProductDetails"
-import Cart from "./pages/Cart"
+import AddAddress from "./pages/AddAddress"
 import Checkout from "./pages/Checkout"
-import OrderSuccess from "./pages/OrderSuccess"
+import AddPayment from "./pages/AddPayment"
 import Bag from "./pages/Bag"
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/add-Address" element={<AddAddress />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/add-payment" element={<AddPayment />} />
         <Route path="/bag" element={ <Bag />} />
 
       </Routes>
