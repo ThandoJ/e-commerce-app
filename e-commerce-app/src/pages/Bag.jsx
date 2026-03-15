@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { increaseQty, decreaseQty, removeItem } from "../redux/cartSlice"
+import { increaseQty, decreaseQty } from "../redux/cartSlice"
 import { Link } from "react-router-dom";
 
 export default function Bag(){
@@ -13,7 +13,7 @@ export default function Bag(){
     );
 
     return (
-        <div className="grid grid-cols-3 gap-8 p-10">
+        <div className="grid grid-cols-3 gap-8 p-10 bg-gray-100">
             <div className="col-span-2">
                 {items.map((item) => (
                     <div key={item.id} className="flex mb-6 bg-white p-4 rounded">
@@ -38,7 +38,7 @@ export default function Bag(){
             </div>
             <div className="bg-white p-6 rounded shadow">
                 <h2 className="text-xl font-bold mb-4">
-                    Bag
+                    Order Summary
                 </h2>
                 <p className="mb-4">
                     Total: ${total.toFixed(2)}
@@ -46,6 +46,7 @@ export default function Bag(){
                 <Link to="/checkout" className="bg-black text-white px-6 py-2 rounded">
                     Checkout
                 </Link>
+                <Link to="/">Back Home</Link>
             </div>
         </div>
     )
