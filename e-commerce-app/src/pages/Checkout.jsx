@@ -34,7 +34,7 @@ const Checkout = () => {
       <div className="bg-white p-6 rounded shadow">
         <h2 className="text-xl font-bold mb-4">Bag</h2>
         <p className="mb-4">Total: ${total.toFixed(2)}</p>
-        <Link to="/checkout" className="bg-black text-white px-6 py-2 rounded">
+        <Link to="/bag" className="bg-black text-white px-6 py-2 rounded">
           Checkout
         </Link>
       </div>

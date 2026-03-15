@@ -44,7 +44,7 @@ export default function Bag(){
                     Total: ${total.toFixed(2)}
                 </p>
                 <Link to="/checkout" className="bg-black text-white px-6 py-2 rounded">
-                    Checkout
+                        Place Your Order
                 </Link>
                 <Link to="/">Back Home</Link>
             </div>
