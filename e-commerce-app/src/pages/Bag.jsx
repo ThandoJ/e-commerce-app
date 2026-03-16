@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
 import { increaseQty, decreaseQty } from "../redux/cartSlice"
 import { Link } from "react-router-dom";
+import dellWhite from "../assets/Dell-XPS-13-White.png"
+import iphoneWhite from "../assets/IPhone 11-Milky-White.png"
+import iphoneBlack from "../assets/IPhone 11-Black.png"
 
  function Bag(){
 
@@ -17,89 +20,99 @@ import { Link } from "react-router-dom";
     const total = subtotal + shipping + gst
 
     return (
-        <div className="bg-gray-100 min-h-screen py-10 px-16">
+        <><div className="bg-gray-100 min-h-screen py-10 px-16">
             <div className="grid grid-cols-3 gap-10">
-            <div className="col-span-2">
-                {items.map((item, index) => (
-                    <div key={item.id}>
-                        <img src={item.image} alt={item.name} className="w-32 object-contain" />
-                        <div className="flex-1">
-                            <h2 className="text-2xl font-semibold">{item.name}</h2>
-                            <p className="text-gray-500">{item.color}</p>
-                            <p className="text-gray-600">{item.description}</p>
+                <div key={item.id} className="flex items-center justify-between bg-white p-6 rounded-xl mb-6">
+
+                    {/* Product Image */}
+                    <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-28 object-contain" />
+
+                    {/* Product Info */}
+                    <div className="flex-1 ml-6">
+                        <h2 className="text-xl font-semibold">{item.name}</h2>
+                        <p className="text-gray-500">{item.color}</p>
+                        <p className="text-gray-600 text-sm">{item.description}</p>
+
+                        <div className="flex items-center gap-2 mt-2 text-green-600">
+                            <span>★ ★ ★ ★ ☆</span>
+                            <span className="text-gray-700">{item.rating}/5</span>
                         </div>
 
-                        {/* Rating, Price, and Quantity */}
-                        <div>
-                            <div className="flex items-center gap-2 mt-3 text-green-600">
-                                <span>★ ★ ★ ★ ☆ </span>
-                                <span className="text-gray-700">
-                                    {item.rating} / 5
-                                </span>
-                                {/* Price */}
-                                <p className="mt-3 text-lg">
-                                    ${item.price} x {item.quantity}
-                                </p>
-                            </div>
-                            {/* Quantity */}
-                            <div className="flex items-center gap-4 text-xl">
-                                <button onClick={() => dispatch(decreaseQty(item.id))} className="text-red-500">
-                                    -
-                                </button>
-                                <span>{item.quantity}</span>
-                                <button onClick={() => dispatch(increaseQty(item.id))} className="text-green-600">
-                                    +
-                                </button>
-                            </div>
-                        </div>
+                        <p className="mt-2 text-lg font-medium">
+                            ${item.price} x {item.quantity}
+                        </p>
+                    </div>
+
+                    {/* Quantity */}
+                    <div className="flex items-center gap-4 text-xl">
+                        <button
+                            onClick={() => dispatch(decreaseQty(item.id))}
+                            className="text-red-500"
+                        >
+                            -
+                        </button>
+
+                        <span>{item.quantity}</span>
+
+                        <button
+                            onClick={() => dispatch(increaseQty(item.id))}
+                            className="text-green-600"
+                        >
+                            +
+                        </button>
+                    </div>
+
+                </div>
 
                         // eslint-disable-next-line no-undef, no-undef
-                        {index !== items.length - 1 && (
-                            <hr className="border-gray-300" />
-                        )}
-                    </div>
-                ))}
+                {index !== item.length - 1 && (
+                    <hr className="border-gray-300" />
+                )}
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow h-fit">
+            
+        </div><div className="bg-white p-8 rounded-2xl shadow h-fit">
                 <h2 className="text-xl font-bold mb-6">
                     Order Summary
                 </h2>
 
                 <div className="flex justify-between mb-3">
-             <span>Items:</span>
-             <span>${subtotal.toFixed(2)} </span>
+                    <span>Items:</span>
+                    <span>${subtotal.toFixed(2)} </span>
                 </div>
 
                 <div className="flex justify-between mb-3">
-             <span>Shipping:</span>
-             <span>${shipping} </span>
+                    <span>Shipping:</span>
+                    <span>${shipping} </span>
                 </div>
 
                 <div className="flex justify-between mb-3">
-             <span>Estimated GST:</span>
-             <span>${gst.toFixed(2)} </span>
+                    <span>Estimated GST:</span>
+                    <span>${gst.toFixed(2)} </span>
                 </div>
 
                 <div className="flex justify-between mb-3">
-             <span>Gift Card:</span>
-             <span>$0.00 </span>
+                    <span>Gift Card:</span>
+                    <span>$0.00 </span>
                 </div>
 
                 <hr className="mb-4" />
 
                 <div className="flex justify-between mb-3">
-             <span>Order Total:</span>
-             <span>${total.toFixed(2)} </span>
+                    <span>Order Total:</span>
+                    <span>${total.toFixed(2)} </span>
                 </div>
 
                 <Link to="/checkout" className="block text-center bg-green-900 text-white py-3 rounded-lg mb-4">
-                Place your order
+                    Place your order
                 </Link>
 
                 <Link to="/" className="block text-center border border-gray-400 py-2 rounded-lg">
-                ← Back
+                    ← Back
                 </Link>
-                </div>
+            </div></>
             </div>
         </div>
     );
