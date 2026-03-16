@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increaseQty, decreaseQty } from "../redux/cartSlice"
 import { Link } from "react-router-dom";
 
-export default function Bag(){
+ function Bag(){
 
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.items);
@@ -104,3 +104,5 @@ export default function Bag(){
         </div>
     );
 }
+
+export default Bag;
