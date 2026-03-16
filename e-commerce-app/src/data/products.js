@@ -229,20 +229,20 @@ const products = [
     },
 
     {
-        id: 16,
+        id: 17,
         name: "Iphone 12 Pro",
         subtitle: "Navy-Blue",
         price: 619.99,
         image: Iphone12Pro03,
         brand: "Apple",
-        category: "Laptop",
+        category: "Mobile phone",
         rating: 4.8,
-        stock: 4,
-        description: "Premium Dell XPS 13 laptop designed for productivity with powerful performance and elegant design."
+        stock: 14,
+        description: "Navy blue ipone 12 Pro with smooth effective performance."
     },
 
     {
-        id: 16,
+        id: 18,
         name: "Dell XPS 15",
         subtitle: "Black",
         price: 1999.99,
@@ -251,7 +251,7 @@ const products = [
         category: "Laptop",
         rating: 4.8,
         stock: 4,
-        description: "Premium Dell XPS 13 laptop designed for productivity with powerful performance and elegant design."
+        description: "Premium Dell XPS 15 laptop designed for productivity with powerful performance and elegant design."
     },
 
 
