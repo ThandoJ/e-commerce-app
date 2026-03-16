@@ -238,7 +238,7 @@ const products = [
         category: "Mobile phone",
         rating: 4.8,
         stock: 14,
-        description: "Navy blue ipone 12 Pro with smooth effective performance."
+        description: "Navy blue iphone 12 Pro with smooth effective performance."
     },
 
     {
