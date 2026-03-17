@@ -1,6 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import products from "../data/products";
-import dellXPS from "../assets/Dell XPS 13.png"
+import DellXPS13 from "../assets/Dell XPS 13.png"
 import card from "../assets/card.png"
 import gift from "../assets/gift.png"
 
@@ -94,9 +94,9 @@ const Checkout = () => {
 
         {/* IMAGE */}
         <img
-          src={products.image}
+          src={item.image}
           className="w-32 h-32 object-contain"
-          alt={dellXPS}
+          alt={item.name}
         />
 
         {/* TEXT CONTENT */}

@@ -26,7 +26,7 @@ function Bag(){
                                 <div className="flex items-center justify-between bg-white p-6 rounded-xl mb-6">
                                     {/* Product Image */}
                                     <img
-                                        src={products.image}
+                                        src={item.image}
                                         alt={item.name}
                                         className="w-28 h-28 object-contain bg-gray-100 rounded-lg p-2"
                                     />
@@ -76,7 +76,7 @@ function Bag(){
                         {items.map((item) => (
                             <img
                                 key={item.id}
-                                src={products.image}
+                                src={item.image}
                                 alt={item.name}
                                 className="w-16 h-16 object-contain bg-gray-100 rounded-xl p-2"
                             />
