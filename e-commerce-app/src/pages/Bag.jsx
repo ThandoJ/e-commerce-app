@@ -1,9 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { increaseQty, decreaseQty } from "../redux/cartSlice"
 import { Link } from "react-router-dom";
-import dellWhite from "../assets/Dell-XPS-13-White.png"
-import iphoneWhite from "../assets/IPhone 11-Milky-White.png"
-import iphoneBlack from "../assets/IPhone 11-Black.png"
 
  function Bag(){
 
@@ -20,9 +17,17 @@ import iphoneBlack from "../assets/IPhone 11-Black.png"
     const total = subtotal + shipping + gst
 
     return (
-        <><div className="bg-gray-100 min-h-screen py-10 px-16">
-            <div className="grid grid-cols-3 gap-10">
-                <div key={item.id} className="flex items-center justify-between bg-white p-6 rounded-xl mb-6">
+        <div className="bg-gray-100 min-h-screen py-10 px-16">
+            <div className="grid grid-cols-3 gap-10 max-w-7xl mx-auto">
+
+                <div className="col-span-2">
+                    {items.map((item, index) => (
+
+<div key="item.id">
+                
+                  
+                
+                <div  className="flex items-center justify-between bg-white p-6 rounded-xl mb-6">
 
                     {/* Product Image */}
                     <img
@@ -67,13 +72,17 @@ import iphoneBlack from "../assets/IPhone 11-Black.png"
 
                 </div>
 
-                        // eslint-disable-next-line no-undef, no-undef
+                        
                 {index !== item.length - 1 && (
                     <hr className="border-gray-300" />
                 )}
             </div>
+
+            ))}
             
-        </div><div className="bg-white p-8 rounded-2xl shadow h-fit">
+        </div>
+        
+        <div className="bg-white p-8 rounded-2xl shadow h-fit">
                 <h2 className="text-xl font-bold mb-6">
                     Order Summary
                 </h2>
@@ -112,7 +121,7 @@ import iphoneBlack from "../assets/IPhone 11-Black.png"
                 <Link to="/" className="block text-center border border-gray-400 py-2 rounded-lg">
                     ← Back
                 </Link>
-            </div></>
+            </div> 
             </div>
         </div>
     );
