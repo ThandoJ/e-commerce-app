@@ -6,6 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import icon from "../assets/icon.png";
+import backIcon from "../assets/logo6.svg";
 
 import Sidebar from "../components/Sidebar";
 
@@ -35,11 +36,14 @@ export default function ProductPage() {
 
   return (
     <>
-      <div className="flex bg-gray-100 p-6">
+      <div className="flex justify-between bg-gray-100 p-6">
         <Sidebar />
         <div className="flex flex-col pl-10">
           <Link to="/">
-            <div className="h-22 w-10 mt-12">Back</div>
+            <div className="h-22 mt-12 flex text-xl items-center gap-4 font-400">
+              <img src={backIcon} alt="back button" className="h-4"/>
+              Back
+            </div>
           </Link>
           <div className="flex border-0 border-black border-b-2">
             <div className="flex flex-col gap-2 mr-4">
@@ -72,12 +76,7 @@ export default function ProductPage() {
 
               <p className="text-gray-500">{product.subtitle}</p>
 
-
-
-                <div>
-                  {renderStars(product.rating)}
-                </div>
-
+              <div>{renderStars(product.rating)}</div>
 
               <p className="text-3xl font-medium">${product.price}</p>
 
@@ -94,11 +93,8 @@ export default function ProductPage() {
             </div>
           </div>
           <h1 className="text-3xl font-medium mt-8 mb-2">Description</h1>
-          <p className="text-sm font-400 text-gray-800 w-121">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea saepe
-            ipsum sequi, expedita delectus, magni voluptas provident ipsam
-            doloribus consectetur neque dicta. Natus tenetur quaerat laborum
-            facilis, fugit voluptates cum?
+          <p className="text-sm font-400 text-[#60695C] w-225">
+            {product.largeDescription}
           </p>
         </div>
         {/* Bag Section */}
