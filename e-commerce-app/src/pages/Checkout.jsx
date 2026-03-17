@@ -18,11 +18,11 @@ const Checkout = () => {
   const gst = subtotal * 0.13;
   const total = subtotal + shipping + gst;
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="bg-gray-100 min-h-screen flex p-6 gap-6">
 
 <Sidebar />
 
-    <div className="grid grid-cols-3 gap-10">
+    <div className="grid grid-cols-3 flex-1 gap-10">
       <div className="col-span-2 space-y-8">
         <div className="bg-white rounded-2xl p-8 flex justify-between items-start">
           <div>
