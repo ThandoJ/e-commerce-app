@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import ProductDetails from "./pages/ProductDetails"
-import AddAddress from "./pages/AddAddress"
+
 import Checkout from "./pages/Checkout"
-import AddPayment from "./pages/AddPayment"
+
 import Bag from "./pages/Bag"
+import AddPayment from "./pages/AddPayment"
+import AddAddress from "./pages/AddAddress"
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/add-payment" element={<AddPayment />} />
         <Route path="/bag" element={<Bag />} />
+        <Route path="/add-payment" element={<AddPayment />} />
+        <Route path="/add-address" element={<AddAddress />} />
 
       </Routes>
     </BrowserRouter>

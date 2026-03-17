@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { increaseQty, decreaseQty } from "../redux/cartSlice";
 import React from "react";
-
+import { useNavigate } from "react-router-dom"
 const Checkout = () => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.items);
+  const navigate = useNavigate()
 
   const subtotal = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -145,10 +146,11 @@ const Checkout = () => {
           <span>${total.toFixed(2)}</span>
         </div>
 
-        <button className="w-full bg-green-900 text-white py-3 rounded-lg mb-4">
-          Place your Order
-        </button>
-
+       <button
+         onClick={() => navigate("/add-payment")}
+         className="w-full bg-green-900 text-white py-3 rounded-lg mb-4">
+            Place your Order
+       </button>
         
         <Link to="/bag" className="block text-center border border-gray-400 py-2 rounded-lg">
           ← Back
