@@ -1,4 +1,7 @@
 import Sidebar from "../components/Sidebar";
+import products from "../data/products";
+import dellXPS from "../assets/Dell XPS 13.png"
+
 
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,6 +20,8 @@ const Checkout = () => {
   const shipping = 6.99
   const gst = subtotal * 0.13;
   const total = subtotal + shipping + gst;
+
+
   return (
     <div className="bg-gray-100 min-h-screen flex p-6 gap-6">
 
@@ -76,43 +81,80 @@ const Checkout = () => {
             REVIEW YOUR BAG
           </h2>
 
-        {items.map((item) => (
+       {items.map((item) => (
+  <div key={item.id} className="mb-10">
 
-          <div key={item.id}>
+    <div className="flex justify-between items-center">
 
+      {/* LEFT SIDE */}
+      <div className="flex gap-8">
 
-            <img src={item.image} className="w-24 h-24 object-contain" />
+        {/* IMAGE */}
+        <img
+          src={products.image}
+          className="w-32 h-32 object-contain"
+          alt={dellXPS}
+        />
 
-            <div className="ml-6 flex-1">
+        {/* TEXT CONTENT */}
+        <div className="flex flex-col justify-center">
 
-              <h3 className="text-lg font-semibold">{item.name}</h3>
+          <h2 className="text-2xl font-semibold">
+            {item.name}
+          </h2>
 
-            <p className="text-gray-500">{item.color}</p>
+          <p className="text-gray-500 text-lg">
+            {item.subtitle}
+          </p>
 
-              <p className="text-gray-600">{item.description}</p>
+          <p className="text-gray-600 mt-2 max-w-md">
+            {item.description}
+          </p>
 
-              <div className="flex items-center gap-2 mt-2 text-green-600">
-              <span> ★ ★ ★ ★ ☆</span>
-              <span className="text-gray-700">
-                {item.rating} / 5
-              </span>
-              </div>
-
-              <p className="mt-2">
-                ${item.price} x {item.quantity}
-              </p>
-
-            </div>
-
-
-            {/* Quantity */}
-            <div className="flex items-center gap-4 text-xl">
-              <button onClick={() => dispatch(decreaseQty(item.id))} className="text-red-500">-</button>
-              <span>{item.quantity}</span>
-              <button onClick={() => dispatch(increaseQty(item.id))} className="text-green-600">+</button>
-            </div>
+          {/* RATING */}
+          <div className="flex items-center gap-3 mt-3 text-green-700 text-lg">
+            <span>★ ★ ★ ★ ☆</span>
+            <span className="text-gray-600 text-base">
+              {item.rating} / 5
+            </span>
           </div>
-        ))}
+
+          {/* PRICE */}
+          <p className="mt-4 text-lg">
+            ${item.price} x {item.quantity}
+          </p>
+
+        </div>
+      </div>
+
+      {/* RIGHT SIDE (QUANTITY) */}
+      <div className="flex items-center gap-6 text-xl pr-6">
+
+        <button
+          onClick={() => dispatch(decreaseQty(item.id))}
+          className="text-red-500 text-2xl"
+        >
+          -
+        </button>
+
+        <span>{item.quantity}</span>
+
+        <button
+          onClick={() => dispatch(increaseQty(item.id))}
+          className="text-green-600 text-2xl"
+        >
+          +
+        </button>
+
+      </div>
+
+    </div>
+
+    {/* DIVIDER */}
+    <div className="border-b border-gray-300 mt-8"></div>
+
+  </div>
+))}
         </div>
       </div>
       <div className="bg-white p-8 rounded-2xl shadow h-fit">

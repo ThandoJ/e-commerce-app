@@ -61,7 +61,7 @@ export default function Home() {
           ))}
         </div>
 
-        <Link to="/checkout">
+        <Link to="/bag">
           <button className="w-full bg-black text-white p-3 rounded-xl flex items-center justify-center gap-2">
             <img src={icon} className="w-6 h-6" />
             View Bag
