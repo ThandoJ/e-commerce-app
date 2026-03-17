@@ -1,3 +1,5 @@
+import Sidebar from "../components/Sidebar";
+
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { increaseQty, decreaseQty } from "../redux/cartSlice";
@@ -17,6 +19,9 @@ const Checkout = () => {
   const total = subtotal + shipping + gst;
   return (
     <div className="bg-gray-100 min-h-screen py-10">
+
+<Sidebar />
+
     <div className="grid grid-cols-3 gap-10">
       <div className="col-span-2 space-y-8">
         <div className="bg-white rounded-2xl p-8 flex justify-between items-start">
