@@ -1,6 +1,8 @@
 import Sidebar from "../components/Sidebar";
 import products from "../data/products";
 import dellXPS from "../assets/Dell XPS 13.png"
+import card from "../assets/card.png"
+import gift from "../assets/gift.png"
 
 
 import { Link } from "react-router-dom";
