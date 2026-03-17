@@ -49,15 +49,15 @@ export default function ProductPage() {
             <div className="flex flex-col gap-2 mr-4">
               <img
                 src={product.image}
-                className="h-12.5 w-12.5 object-contain"
+                className="h-12.5 w-12.5 bg-white rounded-lg object-contain"
               />
               <img
                 src={product.image}
-                className="h-12.5 w-12.5 object-contain"
+                className="h-12.5 w-12.5 bg-white rounded-lg object-contain"
               />
               <img
                 src={product.image}
-                className="h-12.5 w-12.5 object-contain"
+                className="h-12.5 w-12.5 bg-white rounded-lg object-contain"
               />
             </div>
             <div className="flex gap-10">
@@ -65,7 +65,7 @@ export default function ProductPage() {
 
               <img
                 src={product.image}
-                className="h-80 w-68 mr-8 object-contain"
+                className="h-80 w-68 mr-8 bg-white rounded-lg object-contain"
               />
             </div>
 
