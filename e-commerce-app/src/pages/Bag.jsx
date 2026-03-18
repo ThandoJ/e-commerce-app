@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { increaseQty, decreaseQty } from "../redux/cartSlice"
 import { Link } from "react-router-dom";
 import products from "../data/products";
+import icon from "../assets/Icon.png";
+import Sidebar from "../components/Sidebar"
 
 function Bag(){
     const dispatch = useDispatch();
@@ -18,9 +20,30 @@ function Bag(){
     0
   );
 
+  const renderStars = (rating) => {
+    const full = Math.floor(rating);
+    const half = rating % 1 >= 0.5;
     return (
-        <div className="bg-gray-100 min-h-screen py-10 px-16">
-            <div className="grid grid-cols-3 gap-10 max-w-7xl mx-auto">
+        <div className="flex items-center gap-1">
+            {[...Array(full)].map((_, i) => (
+                <span key={i} className="text-green-700 text-xl">★</span>
+            ))}
+            {half && <span className="text-green-700 text-xl">✩</span>}
+            <span className="text-green-700 ml-2 text-sm"> {rating} / 5 </span>
+            </div>
+            )
+  }
+
+    return (
+        <div className="bg-gray-100 flex min-h-screen p-6 gap-6">
+
+            <Sidebar />
+
+            <div className="flex-1">
+
+        <h1 className="text-4xl font-bold mb-8">Check your Bag Items</h1>
+
+            <div className="grid grid-cols-3 gap-10">
 
         <div className="col-span-2">
           {enrichedItems.length === 0 ? (
@@ -32,13 +55,16 @@ function Bag(){
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-28 h-28 object-contain bg-gray-100 rounded-lg p-2"
+                    className="w-40 h-40 object-contain"
                   />
                                     {/* Product Info */}
                                     <div className="flex-1 ml-6">
                                         <h2 className="text-xl font-semibold">{item.name}</h2>
                                         <p className="text-gray-400 text-sm"> {item.subtitle} </p>
                                         <p className="text-gray-600 text-sm">{item.description}</p>
+
+                                        {renderStars(item.rating)}
+
                                         <p className="mt-2 text-lg font-medium">
                                             ${item.price} x {item.quantity}
                                         </p>
@@ -59,6 +85,7 @@ function Bag(){
                                             +
                                         </button>
                                     </div>
+
                                 </div>
                                 {/* Divider */}
                                 {index !== items.length - 1 && (
@@ -69,32 +96,41 @@ function Bag(){
                     )}
                 </div>
 
-                <div className="col-span-1 border-l-2 border-black pl-6">
-                    <h2 className="text-xl font-bold mb-6 text-center">Bag</h2>
-                    <div className="mb-6 text-center">
+                <div className="col-span-1 border-l-2 border-gray-300 pl-8">
+                    <h2 className="text-3xl font-bold mb-6 text-center">Bag</h2>
+
+                    <div className="grid grid-cols-3 gap-3 mb-6">
+            {enrichedItems.map((item) => (
+                <div key={item.id} className="bg-white rounded-xl p-2 flex items-center justify-center">
+              <img
+                key={item.id}
+                src={item.image}
+                alt={item.name}
+                className="w-16 h-16 object-contain"
+              />
+              </div>
+            ))}
+        </div>
+
+                    <div className="flex justify-between mb-6 items-center">
                         <p className="text-gray-600">Bag Total:</p>
                         <p className="text-xl font-semibold">
                             ${subtotal.toFixed(2)}
                         </p>
                         </div>
-                   <div className="grid grid-cols-2 gap-4 mb-6 justify-items-center">
-            {enrichedItems.map((item) => (
-              <img
-                key={item.id}
-                src={item.image}
-                alt={item.name}
-                className="w-16 h-16 object-contain bg-gray-100 rounded-xl p-2"
-              />
-            ))}
-                    </div>
+
+                    
                     <Link to="/checkout">
-                        <button className="w-full bg-black text-white p-3 rounded-xl">
+                        <button className="w-full bg-black text-white p-3 rounded-xl flex items-center justify-center gap-2">
+                            <img src={icon} className="w-6 h-6" />
                             Checkout
                         </button>
                     </Link>
                 </div>
+
             </div>
-        </div>   
+        </div>
+        </div>  
     );
 }
 
