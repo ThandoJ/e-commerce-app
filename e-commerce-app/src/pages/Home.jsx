@@ -5,7 +5,7 @@ import icon from "../assets/icon.png";
 
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 export default function Home() {
   const [search, setSearch] = useState("");
@@ -26,7 +26,7 @@ export default function Home() {
       <div className="flex-1">
         {/* Search */}
         <div className="mb-8 flex justify-center">
-          <div className="w-[420px]">
+          <div className="w-105">
             <p className="text-gray-600 mb-2">Search Item</p>
 
             <input
