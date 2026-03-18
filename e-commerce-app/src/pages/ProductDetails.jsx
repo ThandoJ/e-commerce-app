@@ -5,7 +5,7 @@ import { addToCart } from "../redux/cartSlice";
 import { useNavigate, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import icon from "../assets/icon.png";
+import Icon from "../assets/Icon.png";
 import backIcon from "../assets/logo6.svg";
 
 import Sidebar from "../components/Sidebar";
@@ -118,7 +118,7 @@ export default function ProductPage() {
 
           <Link to="/bag">
             <button className="w-full bg-black text-white p-3 rounded-xl flex items-center justify-center gap-2">
-              <img src={icon} className="w-6 h-6" />
+              <img src={Icon} className="w-6 h-6" />
               View Bag
             </button>
           </Link>
