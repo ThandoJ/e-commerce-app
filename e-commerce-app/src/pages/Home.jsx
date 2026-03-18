@@ -1,7 +1,7 @@
 import Sidebar from "../components/Sidebar";
 import ProductCard from "../components/ProductCard";
 import products from "../data/products";
-import icon from "../assets/icon.png";
+import Icon from "../assets/Icon.png";
 
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -67,7 +67,7 @@ export default function Home() {
 
         <Link to="/bag">
           <button className="w-full bg-black text-white p-3 rounded-xl flex items-center justify-center gap-2">
-            <img src={icon} className="w-6 h-6" />
+            <img src={Icon} className="w-6 h-6" />
             View Bag
           </button>
         </Link>
