@@ -1,8 +1,8 @@
-import logo1 from "../assets/logo1.png"
-import logo2 from "../assets/logo2.png"
-import logo3 from "../assets/logo3.png"
-import logo4 from "../assets/logo4.png"
-import logo5 from "../assets/logo5.png"
+import Logo1 from "../assets/Logo1.png"
+import Logo2 from "../assets/Logo2.png"
+import Logo3 from "../assets/Logo3.png"
+import Logo4 from "../assets/Logo4.png"
+import Logo5 from "../assets/Logo5.png"
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -15,14 +15,14 @@ export default function Sidebar() {
 
       <div className="flex flex-col items-center gap-8">
 
-        <img src={logo1} className="w-8"/>
+        <img src={Logo1} className="w-8"/>
 
-        <img src={logo2} className="w-8 cursor-pointer"/>
+        <img src={Logo2} className="w-8 cursor-pointer"/>
 
       {/* Store */}
         <div className="relative group">
           <Link to="/">
-            <img src={logo3} className="w-8 cursor-pointer" />
+            <img src={Logo3} className="w-8 cursor-pointer" />
           </Link>
 
        {/* Tooltip */}
@@ -36,7 +36,7 @@ export default function Sidebar() {
         {/* BAG */}
         <div className="relative group">
           <Link to="/bag">
-            <img src={logo4} className="w-8 cursor-pointer" />
+            <img src={Logo4} className="w-8 cursor-pointer" />
           </Link>
 
           {/* Tooltip */}
@@ -53,7 +53,7 @@ export default function Sidebar() {
 
       <div >
 
-        <img src={logo5} className="w-10"/>
+        <img src={Logo5} className="w-10"/>
 
       </div>
 
