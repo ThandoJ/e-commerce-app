@@ -1,4 +1,4 @@
-import Applewatch from "../assets/apple-watch.png"
+import Applewatch from "../assets/Apple-watch.png"
 import Headphones from "../assets/Headphones.png"
 import Iphone11 from "../assets/Iphone11.png"
 import RedIphone11 from "../assets/Red-Iphone11.png"
