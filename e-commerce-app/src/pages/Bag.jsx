@@ -7,29 +7,33 @@ function Bag(){
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.items);
 
-    const subtotal = items.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0
-    );
+    
+     const enrichedItems = items.map((item) => {
+    const product = products.find((p) => p.id === item.id);
+    return { ...item, image: product?.image };
+  });
 
-   
+  const subtotal = enrichedItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
     return (
         <div className="bg-gray-100 min-h-screen py-10 px-16">
             <div className="grid grid-cols-3 gap-10 max-w-7xl mx-auto">
-                <div className="col-span-2">
-                    {items.length === 0 ? (
-                        <p className="text-gray-500">Your bag is empty</p>
-                    ) : (
-                        items.map((item, index) => (
-                            <div key={item.id}>
-                                <div className="flex items-center justify-between bg-white p-6 rounded-xl mb-6">
-                                    {/* Product Image */}
-                                    <img
-                                        src={item.image}
-                                        alt={item.name}
-                                        className="w-28 h-28 object-contain bg-gray-100 rounded-lg p-2"
-                                    />
+
+        <div className="col-span-2">
+          {enrichedItems.length === 0 ? (
+            <p className="text-gray-500">Your bag is empty</p>
+          ) : (
+            enrichedItems.map((item, index) => (
+              <div key={item.id}>
+                <div className="flex items-center justify-between bg-white p-6 rounded-xl mb-6">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-28 h-28 object-contain bg-gray-100 rounded-lg p-2"
+                  />
                                     {/* Product Info */}
                                     <div className="flex-1 ml-6">
                                         <h2 className="text-xl font-semibold">{item.name}</h2>
@@ -64,6 +68,7 @@ function Bag(){
                         ))
                     )}
                 </div>
+
                 <div className="col-span-1 border-l-2 border-black pl-6">
                     <h2 className="text-xl font-bold mb-6 text-center">Bag</h2>
                     <div className="mb-6 text-center">
@@ -71,16 +76,16 @@ function Bag(){
                         <p className="text-xl font-semibold">
                             ${subtotal.toFixed(2)}
                         </p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 mb-6 justify-items-center">
-                        {items.map((item) => (
-                            <img
-                                key={item.id}
-                                src={item.image}
-                                alt={item.name}
-                                className="w-16 h-16 object-contain bg-gray-100 rounded-xl p-2"
-                            />
-                        ))}
+                        </div>
+                   <div className="grid grid-cols-2 gap-4 mb-6 justify-items-center">
+            {enrichedItems.map((item) => (
+              <img
+                key={item.id}
+                src={item.image}
+                alt={item.name}
+                className="w-16 h-16 object-contain bg-gray-100 rounded-xl p-2"
+              />
+            ))}
                     </div>
                     <Link to="/checkout">
                         <button className="w-full bg-black text-white p-3 rounded-xl">

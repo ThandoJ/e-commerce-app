@@ -52,13 +52,17 @@ export default function Home() {
         <h2 className="text-xl font-bold mb-6 text-center">Bag</h2>
 
         <div className="grid grid-cols-3 gap-3 mb-6">
-          {cart.map((item) => (
+          {cart.map((item) => {
+            const product = products.find((p) => p.id === item.id)
+            return (
             <img
               key={item.id}
-              src={item.image}
+              src={product?.image}
+              alt={item.name}
               className="w-14 h-14 object-contain bg-gray-100 rounded-lg"
             />
-          ))}
+            )
+})}
         </div>
 
         <Link to="/bag">

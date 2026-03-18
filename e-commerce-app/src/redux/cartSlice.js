@@ -14,7 +14,8 @@ const cartSlice = createSlice({
       if(item){
         item.quantity += 1
       }else{
-        state.items.push({...action.payload, quantity:1, subtitle: action.payload.subtitle || ""})
+        const {image, ...serializableProduct} = action.payload 
+        state.items.push({...serializableProduct, quantity:1, subtitle: action.payload.subtitle || ""})
       }
     },
 
