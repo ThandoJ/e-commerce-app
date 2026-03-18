@@ -3,6 +3,7 @@ import logo2 from "../assets/logo2.png"
 import logo3 from "../assets/logo3.png"
 import logo4 from "../assets/logo4.png"
 import logo5 from "../assets/logo5.png"
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
 
@@ -18,11 +19,33 @@ export default function Sidebar() {
 
         <img src={logo2} className="w-8 cursor-pointer"/>
 
-         <img src={logo3} className="w-8 cursor-pointer"/>
+      {/* Store */}
+        <div className="relative group">
+          <Link to="/">
+            <img src={logo3} className="w-8 cursor-pointer" />
+          </Link>
 
-        <img src={logo4} className="w-8 cursor-pointer"/>
+       {/* Tooltip */}
+          <span className="absolute left-12 top-1/2 -translate-y-1/2 
+                           bg-black text-white text-xs px-2 py-1 rounded 
+                           opacity-0 group-hover:opacity-100 transition">
+            Store
+          </span>
+        </div>
 
-       
+        {/* BAG */}
+        <div className="relative group">
+          <Link to="/bag">
+            <img src={logo4} className="w-8 cursor-pointer" />
+          </Link>
+
+          {/* Tooltip */}
+          <span className="absolute left-12 top-1/2 -translate-y-1/2 
+                           bg-black text-white text-xs px-2 py-1 rounded 
+                           opacity-0 group-hover:opacity-100 transition">
+            Bag
+          </span>
+        </div>
 
       </div>
 
