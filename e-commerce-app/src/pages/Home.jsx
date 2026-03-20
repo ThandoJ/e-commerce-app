@@ -9,6 +9,7 @@ import {  Link } from "react-router-dom";
 
 export default function Home() {
   const [search, setSearch] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
   const cart = useSelector((state) => state.cart.items);
 
   const filteredProducts = products.filter((product) =>
@@ -16,14 +17,24 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-100 flex p-6 gap-6">
+    <div className="flex bg-gray-100 min-h-screen">
       {/* Sidebar */}
 
-      <Sidebar />
+       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       {/* Product Section */}
 
-      <div className="flex-1">
+      <div className="flex-1 p-4 lg:p-6">
+
+
+        {/* Hamburger */}
+        <button
+          onClick={() => setIsOpen(true)}
+          className="lg:hidden mb-4 text-2xl"
+        >
+          ☰
+        </button>
+
         {/* Search */}
         <div className="mb-8 flex justify-center">
           <div className="w-105">
@@ -39,7 +50,7 @@ export default function Home() {
 
         {/* Product Grid */}
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
