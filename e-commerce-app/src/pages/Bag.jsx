@@ -35,7 +35,7 @@ function Bag(){
   }
 
     return (
-        <div className="bg-gray-100 flex min-h-screen p-6 gap-6">
+        <div className="bg-gray-100 flex  p-6 gap-6">
 
             <Sidebar />
 
