@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import products from "../data/products";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
-import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Icon from "../assets/Icon.png";

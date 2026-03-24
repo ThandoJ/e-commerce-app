@@ -49,7 +49,7 @@ const Checkout = () => {
     <div className="bg-gray-100 min-h-screen p-6 gap-6">
 
 
-    <div className="grid grid-cols-3 gap-10">
+    <div className="grid grid-cols-1. lg:grid-cols-3 gap-10">
       <div className="col-span-2 space-y-8">
         <div className="bg-white rounded-2xl p-8 flex justify-between items-start">
           <div>
