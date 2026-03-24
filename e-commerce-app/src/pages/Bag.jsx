@@ -43,7 +43,7 @@ function Bag(){
 
         <h1 className="text-4xl font-bold mb-8">Check your Bag Items</h1>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-3 gap-10 w-full">
 
         <div className="col-span-1 lg:border-l-2 border-gray-300 lg:pl-8">
           {enrichedItems.length === 0 ? (
